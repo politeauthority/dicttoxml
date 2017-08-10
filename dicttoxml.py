@@ -39,14 +39,12 @@ except:
 def set_debug(debug=True, filename='dicttoxml.log'):
     if debug:
         import datetime
-        print('Debug mode is on. Events are logged at: %s' % (filename))
         logging.basicConfig(filename=filename, level=logging.INFO)
         LOG.info('\nLogging session starts: %s' % (
             str(datetime.datetime.today()))
         )
     else:
         logging.basicConfig(level=logging.WARNING)
-        print('Debug mode is off.')
 
 
 def unicode_me(something):
